@@ -34,9 +34,18 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+            <img
+              src={effectiveTheme === 'dark' ? '/YoungSocial_logo_450_.png' : '/YoungSocial_logo_450.png'}
+              alt="YoungSocial Logo"
+              className="h-8 w-auto"
+              onError={(e) => {
+                // Fallback if theme-specific logos are not found or if there's an error loading them
+                (e.target as HTMLImageElement).src = '/youngsocial_logo.jpg';
+              }}
+            />
+            {/* <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-sm">YS</span>
-            </div>
+            </div> */}
             <span className="font-bold text-xl">YoungSocial</span>
           </Link>
 

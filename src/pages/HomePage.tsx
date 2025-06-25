@@ -48,11 +48,6 @@ export function HomePage() {
                     {t('hero.shopNow')}
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                  <Link to="/about">
-                    {t('hero.learnMore')}
-                  </Link>
-                </Button>
               </div>
             </motion.div>
           </div>

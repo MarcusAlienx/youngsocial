@@ -26,6 +26,7 @@ const translations = {
     'hero.brand': 'YoungSocial',
     'hero.description': 'Descubre nuestra colección de gorras y accesorios urbanos que definen tu estilo único',
     'hero.cta': 'Explorar Colección',
+    'hero.shopNow': 'Tienda en Linea',
 
     // Product section
     'products.title': 'Nuestros Productos',
@@ -35,8 +36,14 @@ const translations = {
     'products.newProduct': 'Nuevo',
     'products.onSale': 'Oferta',
     'products.viewDetails': 'Ver Detalles',
+    'products.featured': 'Productos Destacados',
+    'products.featuredDescription': 'Echa un vistazo a nuestros productos más populares.',
+    'products.viewAll': 'Ver Todos los Productos',
 
     // Categories
+    'categories.title': 'Explora Nuestras Categorías',
+    'categories.subtitle': 'Encuentra lo que necesitas para destacar',
+    'categories.products': 'Productos',
     'category.gorras': 'Gorras',
     'category.ropa': 'Ropa',
     'category.accesorios': 'Accesorios',
@@ -70,6 +77,11 @@ const translations = {
     'about.description': 'YoungSocial nace de la pasión por la moda urbana y el estilo auténtico. Creamos piezas únicas que reflejan la energía y creatividad de la juventud mexicana.',
     'about.mission.title': 'Nuestra Misión',
     'about.mission.description': 'Ofrecer productos de calidad que expresen la personalidad única de cada persona, conectando la cultura urbana con la moda contemporánea.',
+
+    // Call to Action (CTA)
+    'cta.title': '¿Listo para destacar?',
+    'cta.subtitle': 'Ponte en contacto con nosotros o explora nuestros productos.',
+    'cta.contact': 'Contáctanos',
 
     // Footer
     'footer.followUs': 'Síguenos',
@@ -109,6 +121,7 @@ const translations = {
     'hero.brand': 'YoungSocial',
     'hero.description': 'Discover our collection of urban caps and accessories that define your unique style',
     'hero.cta': 'Explore Collection',
+    'hero.shopNow': 'Shop Online',
 
     // Product section
     'products.title': 'Our Products',
@@ -118,8 +131,14 @@ const translations = {
     'products.newProduct': 'New',
     'products.onSale': 'Sale',
     'products.viewDetails': 'View Details',
+    'products.featured': 'Featured Products',
+    'products.featuredDescription': 'Check out our most popular items.',
+    'products.viewAll': 'View All Products',
 
     // Categories
+    'categories.title': 'Explore Our Categories',
+    'categories.subtitle': 'Find what you need to stand out',
+    'categories.products': 'Products',
     'category.gorras': 'Caps',
     'category.ropa': 'Clothing',
     'category.accesorios': 'Accessories',
@@ -153,6 +172,11 @@ const translations = {
     'about.description': 'YoungSocial was born from a passion for urban fashion and authentic style. We create unique pieces that reflect the energy and creativity of Mexican youth.',
     'about.mission.title': 'Our Mission',
     'about.mission.description': 'To offer quality products that express each person\'s unique personality, connecting urban culture with contemporary fashion.',
+
+    // Call to Action (CTA)
+    'cta.title': 'Ready to Stand Out?',
+    'cta.subtitle': 'Get in touch with us or explore our products.',
+    'cta.contact': 'Contact Us',
 
     // Footer
     'footer.followUs': 'Follow Us',
