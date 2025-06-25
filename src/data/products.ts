@@ -113,7 +113,7 @@ export const products: Product[] = [
     descriptionEn: 'Knit winter beanie with discrete logo. Ideal for cold weather.',
     price: 299,
     images: [
-      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1571273233454-ae7a1d94432b?w=500&h=500&fit=crop',
       'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop'
     ],
     category: categories[0], // Gorras
@@ -170,7 +170,7 @@ export const products: Product[] = [
     descriptionEn: 'Modern crop hoodie for women with minimalist design.',
     price: 799,
     images: [
-      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1571273233454-ae7a1d94432b?w=500&h=500&fit=crop',
       'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop'
     ],
     category: categories[1], // Ropa
@@ -304,7 +304,7 @@ export const products: Product[] = [
     descriptionEn: 'Bucket hat with modern urban design. Sun protection with style.',
     price: 389,
     images: [
-      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1571273233454-ae7a1d94432b?w=500&h=500&fit=crop',
       'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop'
     ],
     category: categories[0], // Gorras
@@ -419,7 +419,7 @@ export const products: Product[] = [
     descriptionEn: 'Beanie with thermal technology. Perfect for urban winter.',
     price: 399,
     images: [
-      'https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500&h=500&fit=crop',
+      'https://images.unsplash.com/photo-1571273233454-ae7a1d94432b?w=500&h=500&fit=crop',
       'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500&fit=crop'
     ],
     category: categories[2], // Accesorios
