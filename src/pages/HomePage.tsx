@@ -45,12 +45,7 @@ export function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="text-lg px-8">
                   <Link to="/catalog">
-                    {t('hero.shopNow')}
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                  <Link to="/about">
-                    {t('hero.learnMore')}
+                    Tienda en Linea
                   </Link>
                 </Button>
               </div>
@@ -103,7 +98,7 @@ export function HomePage() {
                         </div>
                         <h3 className="text-xl font-semibold mb-2">{categoryName}</h3>
                         <p className="text-muted-foreground">
-                          {category.count} {t('categories.products')}
+                          {category.count} Productos
                         </p>
                       </div>
                     </Link>

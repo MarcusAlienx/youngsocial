@@ -26,6 +26,7 @@ const translations = {
     'hero.brand': 'YoungSocial',
     'hero.description': 'Descubre nuestra colección de gorras y accesorios urbanos que definen tu estilo único',
     'hero.cta': 'Explorar Colección',
+    'hero.shopNow': 'Tienda en Linea',
 
     // Product section
     'products.title': 'Nuestros Productos',
@@ -37,6 +38,9 @@ const translations = {
     'products.viewDetails': 'Ver Detalles',
 
     // Categories
+    'categories.title': 'Explora Nuestras Categorías',
+    'categories.subtitle': 'Encuentra lo que necesitas para destacar',
+    'categories.products': 'Productos',
     'category.gorras': 'Gorras',
     'category.ropa': 'Ropa',
     'category.accesorios': 'Accesorios',
@@ -109,6 +113,7 @@ const translations = {
     'hero.brand': 'YoungSocial',
     'hero.description': 'Discover our collection of urban caps and accessories that define your unique style',
     'hero.cta': 'Explore Collection',
+    'hero.shopNow': 'Shop Online',
 
     // Product section
     'products.title': 'Our Products',
@@ -120,6 +125,9 @@ const translations = {
     'products.viewDetails': 'View Details',
 
     // Categories
+    'categories.title': 'Explore Our Categories',
+    'categories.subtitle': 'Find what you need to stand out',
+    'categories.products': 'Products',
     'category.gorras': 'Caps',
     'category.ropa': 'Clothing',
     'category.accesorios': 'Accessories',
