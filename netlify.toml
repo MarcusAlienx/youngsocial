@@ -1,11 +1,159 @@
-[images]
-  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
+# Netlify Configuration for YoungSocial E-commerce
 
 [build]
-  command = "bun run build"
+  # Build command - using bun for faster builds
+  command = "npm run build"
+  
+  # Directory to publish (Vite default output)
   publish = "dist"
+  
+  # Environment variables for build
+  [build.environment]
+    NODE_VERSION = "18"
 
+# SPA Redirects - Essential for React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  
+  # Don't redirect API calls or admin assets
+  conditions = {Role = ["admin"], Country = ["!admin-api"]}
+
+# Admin Panel Protection (optional - can be handled by React)
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/login"
+  status = 302
+  conditions = {Role = ["!admin"]}
+
+# Image Optimization Settings
+[images]
+  # Allow external images from these domains
+  remote_images = [
+    "https://images.unsplash.com/*",
+    "https://source.unsplash.com/*", 
+    "https://via.placeholder.com/*",
+    "https://*.supabase.co/*",
+    "https://supabase.com/*"
+  ]
+
+# Headers for Security and Performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security Headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Performance Headers
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Specific headers for HTML files
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Headers for API routes (if using Netlify Functions)
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+
+# Edge Functions (if needed for advanced features)
+# [[edge_functions]]
+#   function = "auth-check"
+#   path = "/admin/*"
+
+# Form Handling (for contact forms)
+[forms]
+  # Enable Netlify Forms
+  [forms.settings]
+    # Spam protection
+    spam_protection = true
+
+# Functions (if using Netlify Functions)
+[functions]
+  # Directory for serverless functions
+  directory = "netlify/functions"
+  
+  # Node.js runtime
+  node_bundler = "esbuild"
+
+# Plugin Configuration
+[[plugins]]
+  # Essential Netlify plugins
+  package = "@netlify/plugin-sitemap"
+  
+  [plugins.inputs]
+    buildDir = "dist"
+    exclude = [
+      "/admin/**",
+      "/api/**"
+    ]
+
+# Development Settings
+[dev]
+  # Local development server
+  command = "npm run dev"
+  port = 5173
+  publish = "dist"
+  
+  # Environment variables for local development
+  [dev.env]
+    VITE_ENVIRONMENT = "development"
+
+# Branch-specific Settings
+[context.production]
+  # Production-specific settings
+  [context.production.environment]
+    VITE_ENVIRONMENT = "production"
+    NODE_ENV = "production"
+
+[context.deploy-preview]
+  # Deploy preview settings
+  [context.deploy-preview.environment]
+    VITE_ENVIRONMENT = "preview"
+
+[context.branch-deploy]
+  # Branch deploy settings
+  [context.branch-deploy.environment]
+    VITE_ENVIRONMENT = "staging"
+
+# Performance Optimizations
+[build.processing]
+  # Skip processing for these file types
+  skip_processing = false
+
+[build.processing.css]
+  # CSS optimization
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  # JavaScript optimization  
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  # HTML optimization
+  pretty_urls = true
+  canonical_urls = true
+
+# Analytics (optional)
+# [analytics]
+#   provider = "google"
+#   google_analytics = "GA_TRACKING_ID"
+
+# Split Testing (optional)
+# [[split_tests]]
+#   path = "/"
+#   branches = [
+#     { branch = "main", percentage = 100 },
+#     { branch = "feature-test", percentage = 0 }
+#   ]
