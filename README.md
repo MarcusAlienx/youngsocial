@@ -1,5 +1,7 @@
 # YoungSocial - E-commerce con Panel de Administración
 
+**Note:** This project is currently under development.
+
 Una tienda en línea moderna construida con React, TypeScript, Tailwind CSS, Supabase y desplegada en Netlify.
 
 ## 🚀 Características
