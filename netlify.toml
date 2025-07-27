@@ -10,6 +10,7 @@
   # Environment variables for build
   [build.environment]
     NODE_VERSION = "18"
+    NPM_FLAGS = "--force"
 
 # SPA Redirects - Essential for React Router
 [[redirects]]
