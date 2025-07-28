@@ -176,7 +176,7 @@ const translations = {
     'about.title': 'About YoungSocial',
     'about.description': 'YoungSocial was born from a passion for urban fashion and authentic style. We create unique pieces that reflect the energy and creativity of Mexican youth.',
     'about.mission.title': 'Our Mission',
-    'about.mission.description': 'To offer quality products that express each person\'s unique personality, connecting urban culture with contemporary fashion.'}
+    'about.mission.description': 'To offer quality products that express each person\'s unique personality, connecting urban culture with contemporary fashion.',
 
     // Footer
     'footer.followUs': 'Follow Us',
