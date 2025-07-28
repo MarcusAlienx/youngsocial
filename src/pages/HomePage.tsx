@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
 import { ProductCard } from '../components/shop/ProductCard';
-import { PageTransition, containerVariants, itemVariants, heroVariants, categoryCardVariants } from '../components/ui/PageTransition';
+import { PageTransition, containerVariants, itemVariants, heroVariants, heroTextVariants, heroButtonVariants, categoryCardVariants, scrollRevealVariants } from '../components/ui/PageTransition';
 import { Button } from '../components/ui/button';
 import { products, categories } from '../data/products';
 
@@ -29,27 +29,44 @@ export function HomePage() {
           initial="hidden"
           animate="visible"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556306535-38febf6782e7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10" />
+          <motion.div
+            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556306535-38febf6782e7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.05 }}
+            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
+          />
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            {t('hero.title')}
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('hero.subtitle')}
-          </p>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('hero.description')}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="text-lg px-8">
-              <Link to="/catalog">{t('hero.shopNow')}</Link>
-            </Button>
-          </div>
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
+                variants={heroTextVariants}
+              >
+                {t('hero.title')}
+              </motion.h1>
+              <motion.p
+                className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+                variants={heroTextVariants}
+              >
+                {t('hero.subtitle')}
+              </motion.p>
+              <motion.p
+                className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+                variants={heroTextVariants}
+              >
+                {t('hero.description')}
+              </motion.p>
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                variants={heroButtonVariants}
+              >
+                <Button asChild size="lg" className="text-lg px-8">
+                  <Link to="/catalog">{t('hero.shopNow')}</Link>
+                </Button>
+              </motion.div>
             </motion.div>
           </div>
         </motion.section>
@@ -58,11 +75,12 @@ export function HomePage() {
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial="hidden"
+              whileInView="visible"
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
+              variants={scrollRevealVariants}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {t('categories.title')}
@@ -114,11 +132,12 @@ export function HomePage() {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial="hidden"
+              whileInView="visible"
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-12"
+              variants={scrollRevealVariants}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {t('products.featured')}
@@ -147,10 +166,11 @@ export function HomePage() {
 
             <motion.div
               className="text-center mt-12"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial="hidden"
+              whileInView="visible"
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
+              variants={scrollRevealVariants}
             >
               <Button asChild size="lg" className="text-lg px-8">
                 <Link to="/catalog">
@@ -165,10 +185,11 @@ export function HomePage() {
         <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial="hidden"
+              whileInView="visible"
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              variants={scrollRevealVariants}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {t('cta.title')}

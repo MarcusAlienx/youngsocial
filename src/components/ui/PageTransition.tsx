@@ -99,6 +99,16 @@ export const heroVariants = {
 };
 
 // Category card variants
+export const heroTextVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
+export const heroButtonVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.3 } },
+};
+
 export const categoryCardVariants = {
   hidden: {
     opacity: 0,
