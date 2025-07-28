@@ -33,11 +33,12 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
+          import { LogoWithText } from '../ui/Logo';
+
+// ... (resto del código)
+
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">YS</span>
-            </div>
-            <span className="font-bold text-xl">YoungSocial</span>
+            <LogoWithText size="md" />
           </Link>
 
           {/* Desktop Navigation */}
