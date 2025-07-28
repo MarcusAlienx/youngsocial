@@ -20,7 +20,7 @@ export function Logo({ className = '', size = 'md' }: LogoProps) {
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
       <img 
-        src={theme === 'dark' ? LogoLight : LogoDark} 
+        src={effectiveTheme === 'dark' ? LogoLight : LogoDark} 
         alt="YoungSocial Logo" 
         className="w-full h-full object-contain"
       />
