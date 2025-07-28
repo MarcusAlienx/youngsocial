@@ -37,18 +37,19 @@ export function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                {t('hero.title')}
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                {t('hero.subtitle')}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="text-lg px-8">
-                  <Link to="/catalog">
-                    Tienda en Linea
-                  </Link>
-                </Button>
-              </div>
+            {t('hero.title')}
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            {t('hero.subtitle')}
+          </p>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            {t('hero.description')}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="text-lg px-8">
+              <Link to="/catalog">{t('hero.shopNow')}</Link>
+            </Button>
+          </div>
             </motion.div>
           </div>
         </motion.section>

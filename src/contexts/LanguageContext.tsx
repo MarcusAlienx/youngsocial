@@ -36,6 +36,9 @@ const translations = {
     'products.newProduct': 'Nuevo',
     'products.onSale': 'Oferta',
     'products.viewDetails': 'Ver Detalles',
+    'products.featured': 'Productos Destacados',
+    'products.featuredDescription': 'Una selección de nuestros mejores productos.',
+    'products.viewAll': 'Ver Todos los Productos',
 
     // Categories
     'categories.title': 'Explora Nuestras Categorías',
@@ -68,6 +71,11 @@ const translations = {
     'checkout.notes': 'Notas adicionales (opcional)',
     'checkout.submit': 'Enviar Pedido por WhatsApp',
     'checkout.required': 'Campo requerido',
+
+    // CTA
+    'cta.title': 'Únete a la Comunidad',
+    'cta.subtitle': 'Síguenos en redes sociales y sé el primero en enterarte de nuevos lanzamientos y ofertas.',
+    'cta.contact': 'Contáctanos',
 
     // About section
     'about.title': 'Sobre YoungSocial',
@@ -123,6 +131,9 @@ const translations = {
     'products.newProduct': 'New',
     'products.onSale': 'Sale',
     'products.viewDetails': 'View Details',
+    'products.featured': 'Featured Products',
+    'products.featuredDescription': 'A selection of our best products.',
+    'products.viewAll': 'View All Products',
 
     // Categories
     'categories.title': 'Explore Our Categories',
@@ -156,11 +167,16 @@ const translations = {
     'checkout.submit': 'Send Order via WhatsApp',
     'checkout.required': 'Required field',
 
+    // CTA
+    'cta.title': 'Join the Community',
+    'cta.subtitle': 'Follow us on social media and be the first to know about new releases and offers.',
+    'cta.contact': 'Contact Us',
+
     // About section
     'about.title': 'About YoungSocial',
     'about.description': 'YoungSocial was born from a passion for urban fashion and authentic style. We create unique pieces that reflect the energy and creativity of Mexican youth.',
     'about.mission.title': 'Our Mission',
-    'about.mission.description': 'To offer quality products that express each person\'s unique personality, connecting urban culture with contemporary fashion.',
+    'about.mission.description': 'To offer quality products that express each person\'s unique personality, connecting urban culture with contemporary fashion.'}
 
     // Footer
     'footer.followUs': 'Follow Us',
