@@ -1,6 +1,6 @@
 import { useTheme } from '../../contexts/ThemeContext';
-import LogoDark from '/public/YoungSocial_logo_450blk.webp';
-import LogoLight from '/public/YoungSocial_logo_450w.webp';
+import LogoDark from '../../assets/images/YoungSocial_logo_450blk.webp';
+import LogoLight from '../../assets/images/YoungSocial_logow.webp';
 
 interface LogoProps {
   className?: string;
