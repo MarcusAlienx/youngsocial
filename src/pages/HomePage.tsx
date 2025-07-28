@@ -29,12 +29,16 @@ export function HomePage() {
           initial="hidden"
           animate="visible"
         >
-          <motion.div
-            className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556306535-38febf6782e7?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-10"
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.05 }}
-            transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/ys_video_clouds.webm" type="video/webm" />
+          </video>
+          <div className="absolute inset-0 bg-black opacity-10" />
           <div className="container mx-auto px-4 text-center relative z-10">
             <motion.div
               initial="hidden"
