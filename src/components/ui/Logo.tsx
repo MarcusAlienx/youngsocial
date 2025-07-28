@@ -1,10 +1,15 @@
+import { useTheme } from '../../contexts/ThemeContext';
+import LogoDark from '/public/YoungSocial_logo_450blk.webp';
+import LogoLight from '/public/YoungSocial_logo_450w.webp';
+
 interface LogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'white' | 'black';
 }
 
-export function Logo({ className = '', size = 'md', variant = 'default' }: LogoProps) {
+export function Logo({ className = '', size = 'md' }: LogoProps) {
+  const { theme } = useTheme();
+
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
@@ -12,43 +17,13 @@ export function Logo({ className = '', size = 'md', variant = 'default' }: LogoP
     xl: 'w-20 h-20'
   };
 
-  const textColor = {
-    default: 'text-foreground',
-    white: 'text-white',
-    black: 'text-black'
-  };
-
   return (
-    <div className={`${sizeClasses[size]} ${className} flex items-center justify-center relative`}>
-      {/* Main Circle Background */}
-      <div className={`w-full h-full rounded-full ${
-        variant === 'white'
-          ? 'bg-white'
-          : variant === 'black'
-            ? 'bg-black'
-            : 'bg-gradient-to-br from-gray-900 to-gray-700'
-      } flex items-center justify-center relative overflow-hidden`}>
-
-        {/* YS Text */}
-        <div className={`font-bold ${
-          size === 'sm' ? 'text-sm' :
-          size === 'md' ? 'text-lg' :
-          size === 'lg' ? 'text-2xl' :
-          'text-3xl'
-        } ${
-          variant === 'black' ? 'text-white' :
-          variant === 'white' ? 'text-black' :
-          'text-white'
-        } tracking-tight`}>
-          YS
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-1 right-1 w-1 h-1 bg-red-500 rounded-full" />
-        <div className="absolute bottom-1 left-1 w-1 h-1 bg-blue-500 rounded-full" />
-        <div className="absolute top-1 left-1 w-1 h-1 bg-yellow-500 rounded-full" />
-        <div className="absolute bottom-1 right-1 w-1 h-1 bg-green-500 rounded-full" />
-      </div>
+    <div className={`${sizeClasses[size]} ${className}`}>
+      <img 
+        src={theme === 'dark' ? LogoDark : LogoLight} 
+        alt="YoungSocial Logo" 
+        className="w-full h-full object-contain"
+      />
     </div>
   );
 }
@@ -56,8 +31,9 @@ export function Logo({ className = '', size = 'md', variant = 'default' }: LogoP
 export function LogoWithText({
   className = '',
   size = 'md',
-  variant = 'default'
 }: LogoProps) {
+  const { theme } = useTheme();
+
   const textSizes = {
     sm: 'text-lg',
     md: 'text-xl',
@@ -67,12 +43,8 @@ export function LogoWithText({
 
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
-      <Logo size={size} variant={variant} />
-      <span className={`font-bold ${textSizes[size]} ${
-        variant === 'white' ? 'text-white' :
-        variant === 'black' ? 'text-black' :
-        'text-foreground'
-      }`}>
+      <Logo size={size} />
+      <span className={`font-bold ${textSizes[size]} text-foreground`}>
         YoungSocial
       </span>
     </div>
