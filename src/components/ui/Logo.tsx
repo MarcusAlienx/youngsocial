@@ -8,7 +8,7 @@ interface LogoProps {
 }
 
 export function Logo({ className = '', size = 'md' }: LogoProps) {
-  const { theme } = useTheme();
+  const { effectiveTheme } = useTheme();
 
   const sizeClasses = {
     sm: 'w-8 h-8',
@@ -32,7 +32,7 @@ export function LogoWithText({
   className = '',
   size = 'md',
 }: LogoProps) {
-  const { theme } = useTheme();
+  const { effectiveTheme } = useTheme();
 
   const textSizes = {
     sm: 'text-lg',
