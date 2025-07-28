@@ -34,10 +34,6 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          import { LogoWithText } from '../ui/Logo';
-
-// ... (resto del código)
-
           <Link to="/" className="flex items-center space-x-2">
             <LogoWithText size="md" />
           </Link>
