@@ -13,4 +13,18 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["bippy/dist/jsx-dev-runtime", "bippy/dist/jsx-runtime"],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
 });
