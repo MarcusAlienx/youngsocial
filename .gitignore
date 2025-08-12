@@ -1,7 +1,186 @@
-src/.DS_Store
-.DS_Store
-.env
-node_modules
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Local Netlify folder
-.netlify
+# Production builds
+dist/
+dist-ssr/
+build/
+out/
+client/dist/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+drizzle/
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Temporary folders
+tmp/
+temp/
+
+# ====================================
+# VSCode Configuration (SHARED)
+# ====================================
+.vscode/*
+!.vscode/settings.json      # ✅ Editor configuration
+!.vscode/extensions.json    # ✅ Recommended extensions
+!.vscode/launch.json       # ✅ Debug configuration
+!.vscode/tasks.json        # ✅ Automated tasks
+!.vscode/snippets.json     # ✅ Code snippets
+.vscode-test/
+
+# Other IDEs
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj*
+*.sln
+*.sw?
+
+# ====================================
+# Netlify Configuration
+# ====================================
+.netlify/
+functions/
+
+# ====================================
+# OS Generated Files
+# ====================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ====================================
+# Cache and Temporary Files
+# ====================================
+.cache/
+.parcel-cache/
+.npm
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+*.tar.gz
+*.zip
+
+# Yarn files
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ====================================
+# Development and Local Files
+# ====================================
+# Local development
+.local
+*.local
+
+# Backup files
+*.backup
+*.bak
+
+# ====================================
+# Server and Deployment
+# ====================================
+# Server public files (if any)
+server/public
+
+# Vite temp config
+vite.config.ts.*
+
+# ====================================
+# Security and Sensitive Files
+# ====================================
+# Environment variables (critical for security)
+.env*
+!.env.example
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+
+# API keys and secrets
+secrets/
+.secrets
+
+# ====================================
+# Project Specific
+# ====================================
+# Documentation drafts
+*.draft.md
+NOTES.md
+
+# Local testing
+test-results/
+playwright-report/
+.pytest_cache/
+
+# ====================================
+# DO NOT IGNORE - Important for deployment
+# ====================================
+# These files SHOULD be committed:
+# - netlify.toml (deployment config)
+# - package.json (dependencies)
+# - package-lock.json (dependency lock)
+# - tsconfig.json (TypeScript config)
+# - vite.config.ts (build config)
+# - tailwind.config.ts (styling config)
+# - .vscode/ configuration files (team setup)
+# - README.md and documentation
+# ====================================
