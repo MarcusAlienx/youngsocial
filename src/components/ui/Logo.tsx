@@ -8,8 +8,6 @@ interface LogoProps {
 }
 
 export function Logo({ className = '', size = 'md' }: LogoProps) {
-  const { effectiveTheme } = useTheme();
-
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
@@ -19,9 +17,9 @@ export function Logo({ className = '', size = 'md' }: LogoProps) {
 
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
-      <img 
-        src={effectiveTheme === 'dark' ? LogoLight : LogoDark} 
-        alt="YoungSocial Logo" 
+      <img
+        src="/younsocial3d.gif"
+        alt="YoungSocial Logo"
         className="w-full h-full object-contain"
       />
     </div>

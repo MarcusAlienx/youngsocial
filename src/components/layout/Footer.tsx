@@ -1,10 +1,14 @@
 import { Link } from 'react-router-dom';
 import { Instagram, Music } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { useTheme } from '../../contexts/ThemeContext';
 import { socialLinks } from '../../data/products';
+import LogoDark from '../../assets/images/YoungSocial_logo_450blk.webp';
+import LogoLight from '../../assets/images/YoungSocial_logow.webp';
 
 export function Footer() {
   const { language, t } = useLanguage();
+  const { effectiveTheme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,9 +18,11 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">YS</span>
-              </div>
+              <img
+                src={effectiveTheme === 'dark' ? LogoLight : LogoDark}
+                alt="YoungSocial Logo"
+                className="w-12 h-12 object-contain"
+              />
               <span className="font-bold text-xl">YoungSocial</span>
             </div>
             <p className="text-sm text-muted-foreground">
