@@ -22,6 +22,13 @@ export function HomePage() {
   return (
     <PageTransition>
       <div className="min-h-screen">
+        {/* Logo Section */}
+        <section className="py-8 bg-background">
+          <div className="container mx-auto px-4 text-center">
+            <img src="/younsocial3d.gif" alt="Young Social 3D Logo" className="w-1/2 mx-auto" />
+          </div>
+        </section>
+
         {/* Hero Section */}
         <motion.section
           className="relative bg-gradient-to-br from-primary/10 via-background to-secondary/10 min-h-[70vh] flex items-center justify-center overflow-hidden"
