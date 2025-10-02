@@ -86,17 +86,6 @@
   # Node.js runtime
   node_bundler = "esbuild"
 
-# Plugin Configuration
-[[plugins]]
-  # Essential Netlify plugins
-  package = "@netlify/plugin-sitemap"
-  
-  [plugins.inputs]
-    buildDir = "dist"
-    exclude = [
-      "/admin/**",
-      "/api/**"
-    ]
 
 # Development Settings
 [dev]
