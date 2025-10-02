@@ -35,7 +35,11 @@ export function HomePage() {
             muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
+            onLoadStart={() => console.log('Video load started')}
+            onLoadedData={() => console.log('Video loaded successfully')}
+            onError={(e) => console.error('Video load error:', e)}
           >
+            <source src="/videos/ys_video_clouds.mp4" type="video/mp4" />
             <source src="/videos/ys_video_clouds.webm" type="video/webm" />
           </video>
           <div className="absolute inset-0 bg-black opacity-10" />
